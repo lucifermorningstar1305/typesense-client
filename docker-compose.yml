@@ -1,0 +1,22 @@
+services:
+  typesense-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: typesense-client
+    mem_limit: 1G
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "8081:8081"
+
+    environment:
+      - TYPESENSE_HOST=${TYPESENSE_HOST}
+      - TYPESENSE_PORT=${TYPESENSE_PORT}
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+      - TYPESENSE_PROTOCOL=${TYPESENSE_PROTOCOL}
+
+    restart: unless-stopped

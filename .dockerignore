@@ -1,0 +1,8 @@
+**/.venv
+**/.env*
+**/__pycache__/
+**/data/
+**/db/
+**/.ipynb_checkpoints
+**/.gitignore
+**/decrypt.sh
