@@ -44,7 +44,7 @@ Open your browser to `http://localhost:8081` and fill in your Typesense details 
 Build and run with Docker compose
 
 ```{bash}
-docker-compose up --build -d
+docker compose up --build -d
 ```
 Then just open your browser to `http://localhost:8081` and fill in your Typesense details (if you haven't set the `.env` file)
 
